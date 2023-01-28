@@ -59,7 +59,7 @@ public class WhatsappRepository {
             throw new Exception("Group does not exist");
         }
         for(User user: groupUserMap.get(group)){   // if error then change
-            if(!groupUserMap.get(sender).equals(user)){
+            if(!user.equals(sender)){
                 throw new Exception("You are not allowed to send message");
             }
         }
